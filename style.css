@@ -4,9 +4,7 @@ body {
     font-family: "Roboto Light", sans-serif;
 }
 
-.how-to-use {
-    width: 100vw;
-    height: 100vh;
+.container {
     overflow: hidden;
 }
 
@@ -17,13 +15,13 @@ body {
 .how-to-use__items {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 0 0 200px;
+    width: 100vw;
 }
 
 .how-to-use__item {
     display: flex;
     margin: 50px;
-    width: 35%;
+    width: 25%;
 }
 
 p:nth-child(1) {
@@ -35,27 +33,112 @@ p:nth-child(2) {
     font-size: 20px;
     font-weight: 700;
     color: black;
-    white-space: pre-line;
+    width: 80%;
 }
 
 p:nth-child(3) {
     font-size: 20px;
-    white-space: pre-line;
+    width: 90%;
 }
 
 .phone {
-    margin-left: 35px;
+    margin-top: 30px;
+    width: 20%;
 }
+
+@media screen and (max-width: 1200px) {
+    .how-to-use__item {
+        width: 40%;
+    }
+
+    p:nth-child(3) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .how-to-use__item {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .how-to-use__item {
+        width: 35%;
+    }
+
+    p:nth-child(3) {
+        width: 100%;
+    }
+
+    .phone {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .how-to-use {
+        overflow: scroll;
+    }
+
+    .how-to-use__item {
+        width: 35%;
+    }
+
+    .phone {
+        width: 35%;
+    }
+
+    p:nth-child(2) {
+        display: none;
+    }
+
+    p:nth-child(3) {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .how-to-use__item {
+        width: 230px;
+    }
+
+    .phone {
+        width: 50%;
+        margin-left: 50px;
+    }
+
+    p:nth-child(3) {
+        width: 150%;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .how-to-use__item {
+        width: 230px;
+    }
+
+    .phone {
+        width: 50%;
+        margin-left: 50px;
+    }
+
+    p:nth-child(3) {
+        width: 150%;
+        font-size: 13px;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .how-to-use {
         overflow: scroll;
     }
 
-    .how-to-use__items {
-        flex-direction: column;
-        text-align: center;
-        margin: 50px;
+    .how-to-use__item {
+        width: 1000px;
     }
 
     p:nth-child(2) {
@@ -63,26 +146,11 @@ p:nth-child(3) {
     }
 
     p:nth-child(3) {
-        width: 150px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    .how-to-use {
-        overflow: scroll;
+        width: 70%;
+        font-size: 16px;
     }
 
-    .how-to-use__items {
-        flex-direction: row;
-    }
-
-    p:nth-child(2) {
-        display: none;
-    }
-
-    p:nth-child(3) {
-        width: 150px;
-        font-size: 12px;
+    .phone {
+        width: 30%;
     }
 }
